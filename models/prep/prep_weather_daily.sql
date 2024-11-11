@@ -1,6 +1,6 @@
 WITH daily_data AS (
     SELECT * 
-    FROM {ref{('staging_weather_daily')}}
+    FROM {ref{('staging_weather_daily_raw')}}
 ),
 extract_date AS (
     SELECT *,
