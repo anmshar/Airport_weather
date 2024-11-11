@@ -24,4 +24,4 @@ extract_months AS (
 )
 SELECT *
 FROM extract_months
-ORDER BY date;
+ORDER BY date
