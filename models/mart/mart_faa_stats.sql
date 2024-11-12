@@ -1,5 +1,5 @@
 WITH departures AS (
-			SELECT origin ,
+			SELECT origin AS faa,
 					COUNT(*) AS nunique_to,
 					COUNT(sched_dep_time) AS dep_planned,
 					SUM(cancelled) AS dep_cancelled,
@@ -7,7 +7,7 @@ WITH departures AS (
 					COUNT(dep_time) AS dep_n_flights,
 					COUNT(DISTINCT tail_number) AS dep_nunique_tails,
 					COUNT(DISTINCT airline) AS dep_nunique_airlines
-			FROM {{ref('prep_airports')}}
+			FROM {{ref('prep_flights')}}
 			GROUP BY origin
 ),
 -----this is going to be another CTE step
