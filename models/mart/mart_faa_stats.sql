@@ -1,5 +1,5 @@
 WITH departures AS (
-			SELECT origin AS faa,
+			SELECT origin ,
 					COUNT(*) AS nunique_to,
 					COUNT(sched_dep_time) AS dep_planned,
 					SUM(cancelled) AS dep_cancelled,
