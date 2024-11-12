@@ -9,7 +9,7 @@ airline,
 dest,
 count(*) as total_numbers_of_flight
 from {{ref('prep_flights')}}
-group by tail_number ,airline ,dest ,origin),
+group by tail_number ,airline ,dest ,origin)
 select r.*,
 pa.name,
 pa.country,
