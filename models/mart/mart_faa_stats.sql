@@ -35,7 +35,7 @@ total_stats AS (
 			JOIN arrivals a
 			ON d.faa = a.faa
 )
-SELECT ap.city, 
+SELECT 
 		ap.country, 
 		ap.name,
 		t.* 
