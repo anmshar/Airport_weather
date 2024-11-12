@@ -12,7 +12,6 @@ from {{ref('prep_flights')}}
 group by tail_number ,airline ,dest ,faa)
 select r.*,
 pa.name,
-pa.country,
-r.dest
+pa.country
 from rout r  
 join {{ref('prep_airports')}} pa on r.faa = pa.faa
