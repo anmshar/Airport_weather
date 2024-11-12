@@ -20,7 +20,7 @@ arrivals AS (
 					COUNT(arr_time) AS arr_n_flights,
 					COUNT(DISTINCT tail_number) AS arr_nunique_tails,
 					COUNT(DISTINCT airline) AS arr_nunique_arilines
-			FROM {{ref('prep_airports')}}
+			FROM {{ref('prep_flights')}}
 			GROUP BY dest
 ),
 total_stats AS (
